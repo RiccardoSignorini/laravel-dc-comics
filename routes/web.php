@@ -19,4 +19,4 @@ Route::get('/', function () {
     return view('pages.welcome');
 });
 
-Roite::resource('/comics', ComicController::class);
+Route::resource('/comics', ComicController::class);
