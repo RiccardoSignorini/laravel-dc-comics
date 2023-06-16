@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-        <h2 class="text-center">CREATE YOUR COMIC</h2>
+        <h2 class="text-center">MAKE YOUR COMIC</h2>
 
         <form action="{{route('comics.store')}}" method="POST">
 
@@ -47,7 +47,7 @@
                 <input class="form-control" type="text" name="type">
             </div>
 
-            <button type="submit" class="btn btn-primary my-3">CREATE</button>
+            <button type="submit" class="btn btn-primary my-3">MAKE COMIC</button>
         </form>    
     </div>
     
