@@ -8,6 +8,10 @@
 </head>
 <body>
 
+    {{-- COLLEGMENTO HEADER --}}
+    @include('partials.header')
+
+    {{-- COLLEGAMENTO MAIN CONTENT --}}
     @yield('content')
 
 </body>
