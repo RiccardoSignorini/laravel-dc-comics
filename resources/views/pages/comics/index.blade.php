@@ -15,11 +15,14 @@
                 <div class="card col-lg-2 text-center mx-4 my-4">
                     <img src="{{ $elem->thumb }}" alt="">
                     <div class="icon my-3">
-                        <h6>{{ $elem->series }}</h6>
+                        <h6>{{ $elem->title }}</h6>
                         <p>Type:{{ $elem->type }}</p>
                         <p>Price:{{ $elem->price }}</p>
                         <button type="submit" class="btn btn-primary">Change</button>
                         <button type="submit" class="btn btn-danger">Delete</button>
+                        <div class="position-relative">
+                            <a href="{{route('comics.show', ['comic' => $elem->id])}}">More info</a>
+                        </div>
                     </div>
                 </div>
             @endforeach
