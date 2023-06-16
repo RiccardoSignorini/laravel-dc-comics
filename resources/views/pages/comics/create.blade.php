@@ -47,7 +47,7 @@
                 <input class="form-control" type="text" name="type">
             </div>
 
-            <button class="btn btn-primary my-3">CREATE</button>
+            <button type="submit" class="btn btn-primary my-3">CREATE</button>
         </form>    
     </div>
     
