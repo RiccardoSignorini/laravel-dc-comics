@@ -16,7 +16,7 @@ class ComicController extends Controller
     {
         $comics = Comic::All();
 
-        return view('pages.comics.index', compact('comics'));
+        return view('pages.comics.index', compact('comics')); //forse 'comic'
     }
 
     /**
