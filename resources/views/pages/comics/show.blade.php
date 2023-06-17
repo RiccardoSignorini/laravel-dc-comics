@@ -23,8 +23,14 @@
                     <div class="overflow-auto my-2" style="height: 100px">
                         <p>Price:{{ $single_comic->description }}</p>    
                     </div>
-                    <button type="submit" class="btn btn-primary">Change</button>
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    {{-- BUTTON EDIT --}}
+                    <a class="btn btn-primary" href="{{route('comics.edit', $single_comic)}}">Change</a>
+                    <form action="{{route('comics.destroy', $single_comic)}}" method="POST" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        {{-- BUTTON DELETE --}}
+                        <button class="btn btn-danger">Delete</button>    
+                    </form>
                 </div>
             </div>
 
