@@ -8,10 +8,10 @@
     
     <div class="container">
 
-       <h2 class="text-center mt-5">SHOW!</h2> 
+        <h2 class="text-center mt-5">SHOW!</h2> 
 
-       <div class="d-flex flex-wrap container text-center justify-content-around p-5">
-
+        <div class="d-flex flex-wrap container text-center justify-content-around p-5">
+            {{-- SINGOLA CARD --}}
             <div class="card text-center mx-4 my-4">
                 <img src="{{ $single_comic->thumb }}" alt="">
                 <div class="icon my-3" style="height: 350px">
@@ -29,13 +29,20 @@
                         @csrf
                         @method('DELETE')
                         {{-- BUTTON DELETE --}}
-                        <button class="btn btn-danger">Delete</button>    
+                        <button class="btn btn-danger" onclick="return confirmDelete()">Delete</button>    
                     </form>
                 </div>
             </div>
-
         </div>
         
     </div>
+
+    <script>
+
+        function confirmDelete(){
+            return confirm('Are you sure you want delete?')
+        }
+
+    </script>
 
 @endsection

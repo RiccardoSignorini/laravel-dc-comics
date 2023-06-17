@@ -25,7 +25,7 @@
                             @csrf
                             @method('DELETE')
                             {{-- BUTTON DELETE --}}
-                            <button class="btn btn-danger">Delete</button>    
+                            <button class="btn btn-danger" onclick="return confirmDelete()">Delete</button>    
                         </form>
                         {{-- LINK INFO --}}
                         <div class="position-relative">
@@ -37,5 +37,13 @@
         </div>
         
     </div>
+
+    <script>
+
+        function confirmDelete(){
+            return confirm('Are you sure you want delete?')
+        }
+
+    </script>
 
 @endsection
