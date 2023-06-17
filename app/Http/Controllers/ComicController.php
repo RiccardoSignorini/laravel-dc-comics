@@ -83,9 +83,9 @@ class ComicController extends Controller
     {
         $change_comic = $request->All();
 
-        $comic->update('change_comic');
+        $comic->update($change_comic);
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index', ['comic' => $comic->id]);
     }
 
     /**
